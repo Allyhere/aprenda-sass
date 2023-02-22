@@ -1,0 +1,17 @@
+{
+  "name": "aprenda-sass",
+  "version": "1.0.0",
+  "description": "Livro gratuito para aprender o conceito, arquitetura e técnicas em SCSS moderno",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.58.3"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.3"
+  }
+}

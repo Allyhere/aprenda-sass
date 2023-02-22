@@ -172,7 +172,7 @@ No decorrer desse livro veremos funcionalidades que foram implementadas **apenas
 
 <br />
 
-![Exemplo da documentação onde se demarca pra quais versões de Sass aquela funcionalidade está disponível](/assets/sass-implementation-hints.png "Aviso de suporte da documentação")
+![Exemplo da documentação onde se demarca pra quais versões de Sass aquela funcionalidade está disponível](./assets/sass-implementation-hints.png "Aviso de suporte da documentação")
 
 > &nbsp;
 > <br />
@@ -425,7 +425,7 @@ A problemática é a seguinte: **precisamos fazer um componente de botão do Boo
 
 <figure>
 
-![Print da documentação do componente de botão do bootstrap. Uma fileira de 9 botões com as cores azul, cinza, verde, vermelho, amarelo, azul claro, cinza claro, preto e link sem cor de fundo](/assets/bootstrap-buttons.png "variantes de botão do bootstrap")
+![Print da documentação do componente de botão do bootstrap. Uma fileira de 9 botões com as cores azul, cinza, verde, vermelho, amarelo, azul claro, cinza claro, preto e link sem cor de fundo](./assets/bootstrap-buttons.png "variantes de botão do bootstrap")
 
 <figcaption><small>Sim, eu sei que o Bootstrap é feito com Sass, mas ó! Não vale olhar ein!</small></figcaption>
 </figure>
@@ -451,7 +451,7 @@ Observando o HTML do exemplo, percebemos que temos uma classe base, a `.btn` e u
 O botão ficaria assim:
 <br />
 
-![botão acizentado com borda preta](/assets/btn-base.png)
+![botão acizentado com borda preta](./assets/btn-base.png)
 
 
 Agora podemos criar uma classe modificadora! Quando criamos variantes de um mesmo elemento, podemos definir na classe base todas as características que o elemento tem em comum e nas modificadoras apenas as suas variações.
@@ -499,7 +499,7 @@ E não só isso, botões são elementos interativos, então eles precisam de est
 
 E ficou assim:
 
-![botão azul sem borda](/assets/btn-base-primary.png)
+![botão azul sem borda](./assets/btn-base-primary.png)
 
 Mas percebe que eu só fiz a base e uma variante pra cada botão e já tem um pouco mais de 40 linhas de CSS?
 E só pra deixar claro, a quantidade de linhas de CSS não são problema, principalmente quando esse CSS é necessário, mas em relação à experiência de desenvolvimento, se eu adicionar alguma mudança que altere o estado `:hover`, eu vou precisar fazer em todas as variantes de botão, variável por variável num arquivo enorme de CSS.
