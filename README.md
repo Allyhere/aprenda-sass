@@ -27,11 +27,11 @@
 &nbsp;
 
 ## O que é Sass?
-Sass é uma linguagem que extende CSS, ela possuí todas as características do CSS, porém detém um arsenal gigante de funções e recursos que permitem que a gente escreva muito mais CSS usando muito menos código. O Sass é uma linguagem pré-processada, visto que o navegador que é o ambiente que aplicações front-end habitam só aceita HTML, CSS e Javascript. Pra que nosso código Sass possa ser usado em produção, ele precisa ser processado pra que seja transformado em CSS e assim usado em produção.
+**Sass é o CSS que a gente já conhece extendido pra ter super poderes.** Ele possuí todas as características do CSS, porém detém um arsenal gigante de funções e recursos que permitem que a gente escreva muito mais estilos usando muito menos código. O Sass é uma linguagem pré-processada, visto que o navegador que é o ambiente que aplicações front-end habitam só aceita HTML, CSS e Javascript, então que seu código Sass possa ser usado em produção, ele precisa ser transformado em CSS.
 
 Quando o Sass usa um recurso que não existe no CSS, como um `@mixin`, antes desse código chegar no navegador o pré-processador vai analisar todo documento, realizar todas as operações, resolver todas as condições e cálculos pra só assim transformar todo esse código em CSS puro.
 
-Por esse motivo, discursos como "Sass é melhor que CSS" é um discurso um tanto equivocado, pois ele não compila pra **nada além de CSS**. A proposta do Sass nunca foi de ser melhor que o CSS, mas ser **uma experiência de desenvolvimento melhor pra quem desenvolve em CSS**.
+Por esse motivo, discursos como "Sass é melhor que CSS" são um tanto equivocados, pois ele não compila pra **nada além de CSS**. A proposta do Sass nunca foi de ser melhor que o CSS, mas oferecer **uma melhor experiência de desenvolvimento pra quem desenvolve em CSS**.
 
 Nas palavras da documentação oficial:
 
@@ -52,8 +52,8 @@ Nas palavras da documentação oficial:
 
 ### Sass e SCSS
 
-Sass é o nome oficial da linguagem, SCSS é uma variação de sintaxe dessa linguagem, ou seja, apenas uma forma diferente de escrever.
-No Sass (Syntactically Awesome Stylesheet), usamos identação pra demarcar onde uma propriedade ou declaração começam e acabam, já o SCSS (Sassy Cascading Style Sheets) usa uma sintaxe muito parecida com CSS, usando colchetes pra demarcar onde as regras começam e acabam.
+Sass (Syntactically Awesome Stylesheet) é o nome oficial da linguagem, SCSS (Sassy Cascading Style Sheets) é uma variação de sintaxe dessa linguagem, ou seja, apenas uma forma diferente de escrever.
+No Sass, usamos identação pra demarcar onde uma propriedade ou declaração começam e acabam, já o SCSS usa uma sintaxe muito parecida com CSS, usando colchetes pra demarcar onde as regras começam e acabam.
 
 <details>
   <summary><strong>Veja a sintaxe do SCSS</strong></summary>
@@ -133,10 +133,11 @@ Exemplo:
     color: red;
     display: block;
 ```
-As propriedades do mixin `col()` estão sendo declaradas em várias linhas.
+<small>As propriedades do mixin `col()` estão sendo declaradas em várias linhas.</small>
 
 Para que esse código funcione, ele precisa ou ser escrito em SCSS ou com todos os argumentos de `col()` em uma linha só.
 
+&nbsp;
 
 > &nbsp;
 > <br/>
@@ -150,15 +151,17 @@ Para que esse código funcione, ele precisa ou ser escrito em SCSS ou com todos 
 
 ### Implementações de Sass
 
-O primeiro processador de Sass foi criada em 2006 usando Ruby. Como seus autores já tinham criado a linguagem de template [Haml](http://haml.info/) com sucesso e Ruby era a linguagem mais moderna do ecossistema naquela época. Ruby Sass foi depreciado em 2019.
+O primeiro processador de Sass foi criada em 2006 usando Ruby, pois seus autores já tinham criado a linguagem de template [Haml](http://haml.info/) com sucesso e Ruby era a linguagem mais moderna do ecossistema naquela época. Ruby Sass foi depreciado em 2019.
 
-<br/>
+&nbsp;
 
 > &nbsp;
 > <br/>
 > ⚠ Se você trabalha em alguma aplicação com base em Ruby e usa a gem `sass`, você pode substituí-la pela gem [`sassc`](https://rubygems.org/gems/sassc) e [`sassc-rails`](https://rubygems.org/gems/sassc-rails) pra usar com Ruby on Rails.
 > <br/>
 > &nbsp;
+> 
+&nbsp;
 
 O sucessor do do Ruby Sass foi o LibSass, que era feito em C++ e uma versão com implementação pra Node chamada [Node-sass](https://github.com/sass/node-sass), que rodava LibSass por debaixo dos panos.
 
@@ -166,7 +169,7 @@ Essa versão também foi [depreciada em 2020](https://sass-lang.com/blog/libsass
 
 A versão mais recente e recomendada é o Dart Sass. [Dart](https://dart.dev/) foi escolhido por ser rápido, uma linguagem mais fácil de se escrever do que C++ e por consequÊncia mais amigável pra que pessoas consigam contribuir com o projeto.
 
-Quando você usa o comando `npm install sass`, é o Dart Sass que é instalado.
+Quando você usa o comando `npm install sass`, é o **Dart Sass** que é instalado.
 
 No decorrer desse livro veremos funcionalidades que foram implementadas **apenas no Dart Sass**, como as *At-rules* `@use` e `@forward`. Caso você tenha dúvida se as funcionalidades que você está usando são compatíveis com a versão de Sass do seu projeto, isso é claramente demarcado na [documentação oficial](https://sass-lang.com/documentation/#older-versions).
 
@@ -186,13 +189,13 @@ No decorrer desse livro veremos funcionalidades que foram implementadas **apenas
 
 ## Você não precisa saber nada além de CSS pra começar a usar Sass
 
-A beleza do Sass é que você pode criar um arquivo `.scss` e escrever apenas CSS puro dentro dele, com o tempo você pode ir incrementando seu código com funcionalidades do Sass - refatorando pra usar o *nesting*, usando funções de cores, *mixins* e funções. Dito isso, se você já tem experiência com CSS mas ainda não experimentou Sass, **não deixe que isso te impeça se Sass for requisito da vaga!** Sass como a maioria dos frameworks e processadores não é **nada além de CSS**.
+A beleza do Sass é que você pode criar um arquivo `.scss` e escrever apenas CSS puro dentro dele, com o tempo você pode ir incrementando seu código com funcionalidades do Sass - refatorando pra usar o *nesting*, usando funções de cores, *mixins* e funções. Dito isso, se você já tem experiência com CSS mas ainda não experimentou Sass, **não deixe que isso te impeça se isso for requisito da vaga!** Sass como a maioria dos frameworks e processadores não é **nada muito além de CSS**.
 
-Aprender e se adaptar a esses contextos não vai ser um desafio se você souber CSS, basta um pouco de prática, leitura de como a empresa está aplicando o código e auxílio da documentação.
+Aprender e se adaptar a esses contextos não vai ser um desafio se você souber CSS, basta um pouco de prática, leitura de como a empresa está aplicando o código e auxílio da documentação e colegas de trabalho.
 
 Digo isso porque na minha experiência nos grupos de CSS que participo, a grande parte dos problemas que as pessoas trazem lá sobre processadores e frameworks no fim são apenas problemas de CSS.
 
-Nas minhas experiências trabalhando com Sass, foram raras as vezes que as pessoas do time estavam usando todas as funcionalidades que o Sass oferece. E quando usavam, apenas o contexto do código ajudava muito a começar a entender o que ele estava fazendo, além é claro da humildade de pedir ajuda quando for necessário.
+Nas minha vivência trabalhando com Sass, foram raras as vezes que as pessoas do time estavam usando todas as funcionalidades que o Sass oferece. E quando usavam, apenas o contexto do código ajudava muito a começar a entender o que ele estava fazendo, além é claro da humildade de pedir ajuda quando for necessário.
 
 
 <br />
@@ -210,10 +213,12 @@ As formas que iremos abordar aqui são:
 - [Bundlers](#bundlers)
 - [Automatizadores](#automatizadores)
 - [Toolings de Front-end](#toolings)
+  
+&nbsp;
 
 > &nbsp;
 > <br/>
-> 💡 TL:DR - É muito comum você usar Sass com algum framework de Javascript como React ou Vue. Esses frameworks possuem *bundlers* que já estão realizando uma série de transformações no código e já são capazes de transformar Sass direto da caixa. Isso significa que na maioria dos frameworks de Javascript basta você instalar sass e importar a folha de estilo `.scss` no seu arquivo.
+> 💡 TL:DR - É muito comum você usar Sass com algum framework de Javascript como React ou Vue. Esses frameworks possuem *bundlers* que já estão realizando uma série de transformações no código e já são capazes de transformar Sass direto da caixa. Isso significa que na maioria dos frameworks de Javascript basta você instalar Sass e importar a folha de estilo `.scss` no seu arquivo.
 >
 > Agora, se você quer utilizar Sass em algum projeto particular sem frameworks de javascript, minha recomendação pessoal é usar o [Vite](https://vitejs.dev/guide/features.html#css-pre-processors), uma ferramenta de Javascript, ou [Parcel](https://parceljs.org/languages/sass/), um bundler.
 > <br />
@@ -243,14 +248,14 @@ yarn global add sass
 Com o terminal na pasta raiz do seu projeto, você usa o [CLI (Interface de Linha de Comando)](https://www.hostinger.com.br/tutoriais/o-que-e-cli) do `sass`:
 
 ```bash
-sass <pasta_sass>/<arquivo.scss> <pasta_css>/<arquivo.css>
+sass <pasta_scss>/<arquivo.scss> <pasta_css>/<arquivo.css>
 ```
 
 O comando acima recebe dois argumentos separados por espaço:
-- A pasta que o seu arquivo `.sass` ou `.scss` está seguida do arquivo.
+- A pasta que o seu arquivo `.sass` ou `.scss` está seguida do nome arquivo com a extensão.
 Ex: `styles/sass/main.scss`
 
-- A pasta que que deverão ficar os arquivos CSS compilados do seu Sass.
+- A pasta que que deverão ficar os arquivos CSS compilados do seu Sass, também com nome e extensão.
 Ex: `styles/css/main.css`
 
 Mas nesse caso, toda alteração que você fizer vocÊ vai precisar rodar o comando novamente pra visualizar as mudanças em tempo real. Pra que o Sass observe automáticamente seus arquivos e atualize a saída em CSS, você pode usar o modo `--watch`.
@@ -292,9 +297,9 @@ Hoje você consegue compilar Sass sem escrever uma linha de Javascript, então a
 ### <a id="bundlers"></a>Compilando Sass com bundlers/builders
 O *bundler* é responsável por incorporar código de dependências dentro do seu, transformando elas em HTML, CSS ou Javascript puros quando necessário.
 
-No caso, queremos que os *bundlers* trasformem a dependência Sass em CSS e gerem um código preparado pra funcionar no navegador sem nenhum problema.
+No caso, queremos que eles transformem Sass em CSS pronto pra funcionar no navegador sem nenhum problema.
 
-Os *bundlers* mais populares são Webpack, Parcel e Rollup, mas eles não são os únicos.
+Os  mais populares são Webpack, Parcel e Rollup, mas eles não são os únicos.
 
 Algumas aplicações React, por exemplo usam Webpack como *bundler*, mas de forma pré-configurada, então basta você instalar Sass localmente pra começar a usar. Caso você esteja usando Javascript puro ou algum outro caso em que você precise escolher e configurar o pré-processamento de Sass, eu recomendo o Parcel por ser bem mais <abbr title="Instalar e usar">*plug n' play*</abbr> que as outras alternativas.
 
@@ -427,10 +432,10 @@ A problemática é a seguinte: **precisamos fazer um componente de botão do Boo
 
 ![Print da documentação do componente de botão do bootstrap. Uma fileira de 9 botões com as cores azul, cinza, verde, vermelho, amarelo, azul claro, cinza claro, preto e link sem cor de fundo](./assets/bootstrap-buttons.png "variantes de botão do bootstrap")
 
-<figcaption><small>Sim, eu sei que o Bootstrap é feito com Sass, mas ó! Não vale olhar ein!</small></figcaption>
+<figcaption><small>O Bootstrap é feito com Sasse Javascript e jajá vamos lá fuçar como ele funciona!</small></figcaption>
 </figure>
 
-Observando o HTML do exemplo, percebemos que temos uma classe base, a `.btn` e uma classe modificadora, ex: `.btn-dark`. A classe base contém todas as características que o botão tem, já a modificadora o tema de cores que o botão segue.
+Observando o HTML do exemplo, percebemos que temos uma classe base chamada `.btn` e uma classe modificadora, ex: `.btn-dark`. A classe base contém todas as características que o botão tem, já a modificadora o tema de cores que o botão segue.
 
 <br />
 
@@ -448,7 +453,7 @@ Observando o HTML do exemplo, percebemos que temos uma classe base, a `.btn` e u
 ```
 &nbsp;
 
-O botão ficaria assim:
+Implementando apenas a classe base, o botão ficaria assim:
 <br />
 
 ![botão acizentado com borda preta](./assets/btn-base.png)
@@ -465,7 +470,7 @@ Agora podemos criar uma classe modificadora! Quando criamos variantes de um mesm
 ```
 &nbsp;
 
-E não só isso, botões são elementos interativos, então eles precisam de estados! Temos que criar as pseudo-classes *active*, *hover*, *focus* e *disbaled*!
+E não só isso, botões são elementos interativos, então eles precisam de estados! Temos que criar as pseudo-classes *active*, *hover*, *focus* e *disabled*!
 
 ```css
 .btn:focus {
@@ -504,7 +509,7 @@ E ficou assim:
 Mas percebe que eu só fiz a base e uma variante pra cada botão e já tem um pouco mais de 40 linhas de CSS?
 E só pra deixar claro, a quantidade de linhas de CSS não são problema, principalmente quando esse CSS é necessário, mas em relação à experiência de desenvolvimento, se eu adicionar alguma mudança que altere o estado `:hover`, eu vou precisar fazer em todas as variantes de botão, variável por variável num arquivo enorme de CSS.
 
-O Sass nos dá esse poder de escrever menos pra criar a mesma quantidade de CSS.
+O Sass nos dá esse poder de **escrever menos e melhor pra criar a mesma quantidade de CSS**.
 
 <br />
 
@@ -512,7 +517,7 @@ O Sass nos dá esse poder de escrever menos pra criar a mesma quantidade de CSS.
 
 ## Nesting
 
-Hoje, em Fevereiro de 2023 ainda é proibido colocar seletores dentro de seletores no CSS, [exceto no Chrome e no Safari pela nova especificação de nesting nativo](https://caniuse.com/css-nesting#:~:text=CSS%20nesting%20provides%20the%20ability,required%20a%20CSS%20pre%2Dprocessor.).
+Hoje, em Fevereiro de 2023 conseguimos declarar seletores dentro de seletores no CSS [apenas no Chrome e no Safari pela nova especificação de nesting nativo](https://caniuse.com/css-nesting#:~:text=CSS%20nesting%20provides%20the%20ability,required%20a%20CSS%20pre%2Dprocessor.).
 
 A vantagem do *nesting* (declarar seletores dentro de seletores) é a capacidade de agrupar classes e elementos da mesma forma que eles estão aninhados no HTML.
 
@@ -545,7 +550,7 @@ form button {}
 
 Isso não só nos economizou de escrever o seletor `form` antes de cada seletor filho, mas também demonstra uma relação visual dos elementos dentro de `form` com ele.
 
-Mas e com seletores compostos? podemos usar o parent selector `&`!
+Mas e com seletores compostos? podemos usar o ***parent selector*** "`&`"!
 Esse seletor representa o seletor pai, então ao invés de reescrevê-lo, podemos substituí-lo por esse símbolo. Dessa forma podemos usar seletores compostos, pseudo-elementos e pseudo-classes dentro dos seletores que as abrigam, exemplo:
 
 ```scss
@@ -639,7 +644,7 @@ Usando BEM, poderíamos resolver o problema em relação à especificidade da se
 
 &nbsp;
 
-No código acima, separei `.main-page`, `.header` e `.form` como blocos distintos, pois esses componentes precisam funcionar também de forma independente. Se o formulário ou header de `.main-page` possuir características diferentes dos de outras páginas, faz mais sentido a gente adicionar mais uma classe modificadora, como `.header .header--main-page` do que criar um CSS específico. E detalhe: todos os seletores tem especificidade de apenas **0, 1, 0**.
+No código acima, separei `.main-page`, `.header` e `.form` como blocos distintos, pois esses componentes precisam funcionar também de forma independente. Se o formulário ou header de `.main-page` possuir características diferentes dos de outras páginas, faz mais sentido a gente adicionar uma classe modificadora, como `.header .header--main-page` do que criar um CSS específico. E detalhe: todos os seletores tem especificidade de apenas **0, 1, 0**.
 
 Nesse caso a gente consegue aproveitar uma habilidade maravilhosa do parent selector `&` do Sass (o nesting nativo do CSS ainda não faz isso) de concatenar texto.
 
@@ -742,13 +747,13 @@ Visto isso tudo, como ficaria o botão de bootstrap após implementar o nesting?
 
 &nbsp;
 
-Percebem que algumas das propriedades declaradas se repetem algumas vezes? Valores como a cor branca no texto serão generalizados entre variantes e tons de cor pra estados como `hover` ou `focus` também são reaproveitados entre estados.
+Percebem que algumas das propriedades declaradas se repetem algumas vezes? Valores como a cor branca no texto serão repetidos entre variantes e tons de cor pra estados como `hover` ou `focus` também serão reaproveitados entre estados.
 
 Antes das variáveis CSS existirem, o Sass já oferecia essa funcionalidade de uma forma muito fácil e com várias particularidades interessantes.
 
-As variáveis Sass são declaradas de forma similar ao CSS, mas ao invés do prefixo `--`, variáveis Sass são prefixadas com `$`. Elas também são variáveis "frias", ou seja, elas são transformadas em valores estáticos, enquanto variáveis CSS ainda permanecem variáveis CSS quando vão pro navegador.
+As variáveis Sass são declaradas de forma similar ao CSS, mas ao invés do prefixo `--`, variáveis Sass são prefixadas com `$`. Elas são variáveis "frias", ou seja, elas são transformadas em valores estáticos, enquanto variáveis CSS ainda permanecem variáveis quando vão pro navegador.
 
-Diferente das variáveis CSS, as variáveis Sass podem ser declaradas em qualquer lugar, tornando possível separar as declarações das variáveis de todo o resto da aplicação, o que pode ser útil se você tiver uma biblioteca de *design tokens*.
+Diferente do CSS, as variáveis Sass podem ser declaradas em qualquer lugar, tornando possível separar as declarações delas de todo o resto da aplicação, o que pode ser útil se você tiver uma biblioteca de *design tokens*.
 
 &nbsp;
 
@@ -766,7 +771,7 @@ Sobre a conveção de nomenclatura de variáveis, elas precisam ser kebab-case, 
 
 Se tratando de cores, os padrões de nome mais comuns são misturas de generalizações históricas criadas por frameworks de CSS.
 
-Como varios valores de variáveis podem habitar o mesmo documento, é interessante a primeira palavra exprimir a sua função, nesse caso `$color-`. O segundo valor pode ser o nome da [matiz da cor](https://pt.wikipedia.org/wiki/Matiz) seguido do seu valor de saturação/ luminosidade como no [Tailwind](https://tailwindcss.com/docs/customizing-colors), ex: `$color-rose-500`, ou podemos usar padrões que categorizam cores pelo seu papel no design, como faz o [Bootstrap](https://getbootstrap.com/docs/5.3/customize/color/) (primary, secondary, success, info, warning,danger, light, dark), ex: `$primary-` ou como o [Adam Argyle fez no seu exemplo de color-scheme](https://github.com/argyleink/gui-challenges/blob/main/color-schemes/style.css) (brand, text, surface, shadow, etc).
+Como varios valores de variáveis podem habitar o mesmo documento, é interessante a primeira palavra exprimir a sua função, nesse caso `$color-`. O segundo valor pode ser o nome da [matiz da cor](https://pt.wikipedia.org/wiki/Matiz) seguido do seu valor de saturação/ luminosidade como no [Tailwind](https://tailwindcss.com/docs/customizing-colors), ex: `$color-rose-500`, ou podemos usar padrões que categorizam cores pelo seu papel no design, como faz o [Bootstrap](https://getbootstrap.com/docs/5.3/customize/color/) (primary, secondary, success, info, warning, danger, light e dark), ex: `$primary-` ou como o [Adam Argyle fez no seu exemplo de color-scheme](https://github.com/argyleink/gui-challenges/blob/main/color-schemes/style.css) (brand, text, surface, shadow, etc).
 
 Mas e ai? Qual padrão usar?
 
@@ -854,7 +859,7 @@ Com as variáveis declaradas, conseguimos substituir os valores das propriedades
 
 &nbsp;
 
-Mas até aqui não parece que a gente escreveu tão menos CSS né? E quando criarmos as outras variantes de cor, a classe `.btn` vai ficar enorme, tornando discutível a legibilidade da mesma.
+Mas até aqui não parece que a gente escreveu tão menos CSS né? E quando criarmos as outras variantes de cor, a classe `.btn` ainda vai ficar enorme, tornando discutível a legibilidade da mesma.
 
 Como podemos fazer pra aproveitar ainda mais as habilidades do Sass pra reaproveitar, reduzir ou simplificar nossos códigos?
 
@@ -922,9 +927,10 @@ Abaixo o código da classe `.btn` do arquivo `buttons.scss` comentada. Partes qu
 
 &nbsp;
 
-Vamos analisar esse código trecho por trecho:
+Vamos analisar esse código trecho por trecho?
 
-**Declaração de variáveis mistas (CSS + Sass)**
+### Declaração de variáveis mistas (CSS + Sass)
+
 A declaração `--#{$prefix}btn-padding-x: #{$btn-padding-x};` parece um pouco confusa, mas com um pouco de contexto ela fica mais fácil. Primeiro, vamos identificar as variáveis utilizadas (lembre-se, elas começam com `$`).
 
 Essas variáveis estão declaradas em outro documento chamado `variables.scss` e estão sendo importadas pro `buttons.scss` (eu já explico como).
@@ -938,13 +944,6 @@ $btn-padding-x: .75rem !default;
 
 &nbsp;
 
-### A flag !default
-
-O `!default` nas variáveis é uma flag que altera o comportamento de redefinição da mesma, permitindo que você coloque outro valor nessa variável apenas quando o valor dela for **nulo ou indefinido**. Assim, podemos mudar o valor dessa variável sem alterar o código fonte importando ela através da regra `@use`.
-
-Não vou me aprofundar mais na explicação pois vou abordar isso com mais detalhes quando falarmos de separação de arquivos e importação/ exportação com `@use` e `@forward`. Se estiver curiose, pode ler na documentação oficial [nesse link](https://sass-lang.com/documentation/variables#default-values).
-
-
 ### Interpolação de strings
 
 O conceito de *interpolation* é que ele recebe uma variável ou uma expressão, avalia e a transforma em texto. A declaração `--#{$prefix}btn-padding-x: #{$btn-padding-x};` avalia as variáveis `$prefix` e `$btn-padding`, retorna os seus valores e concatena com o resto da declaração.
@@ -955,6 +954,15 @@ O legal da interpolação é que você pode usar em quase qualquer lugar do cód
 
 &nbsp;
 
+### A flag !default
+
+O `!default` nas variáveis é uma flag que altera o comportamento de redefinição da mesma, permitindo que você coloque outro valor nessa variável apenas quando o valor dela for **nulo ou indefinido**. Assim, podemos mudar o valor dessa variável sem alterar o código fonte importando ela através da regra `@use`.
+
+Não vou me aprofundar mais na explicação pois vou abordar isso com mais detalhes quando falarmos de separação de arquivos e importação/ exportação com `@use` e `@forward`. Se estiver curiose, pode ler na documentação oficial [nesse link](https://sass-lang.com/documentation/variables#default-values).
+
+&nbsp;
+
+
 ## Objetos e loops
 
 Descendo um pouco mais no código fonte, podemos analizar como o Bootstrap produz as variantes, e é um código impressionantemente curto!
@@ -963,8 +971,8 @@ Código do gerador de variantes comentado:
 ```scss
 
 /* Essa expressão @each é quase como um for...of do Javascript.
-   Pode-se ler em pseudo-código como PARA CADA <valores> EM <variável>, FAÇA:
-   No caso abaixo, para cada $color (chave), $value (valor) em $theme-colors (variável), ele vai executar o bloco de código dentro da iteração.
+Pode-se ler em pseudo-código como PARA CADA <valores> EM <variável>, FAÇA:
+No caso abaixo, para cada $color (chave), $value (valor) em $theme-colors (variável), ele vai executar o bloco de código dentro da iteração.
  */
 @each $color, $value in $theme-colors {
 
@@ -997,12 +1005,12 @@ Código do gerador de variantes comentado:
 O código acima itera sobre a variável `$theme-color`, usa o valor da chave `$color` pra definir a cor do tema e condicionais pra renderizar o tema *light*, *dark* ou padrão. Mas isso deixa várias perguntas:
 
 - Se ele está iterando em uma variável, quer dizer que a variável pode ter mais de um valor?
-- O que é esse Mixin e esse `shade-color()` e porque eles parecem funções?
+- O que é esse `@include` e esse `shade-color()` e porque eles parecem funções?
 - Onde tá todo aquele CSS que fica dentro das classes de tema, como `btn-primary` que a gente viu lá no começo?
 
 &nbsp;
 
-### Mapas
+## Mapas
 
 O valor de `$theme-color` está guardado em uma variável em `variables.scss`:
 
@@ -1088,10 +1096,7 @@ Que podem ser acessados da seguinte forma:
   background: map-get($theme-color, primary, background);
 }
 ```
-
-&nbsp;
-
-Se a sintaxe ficou confusa, talvez ajude ler como se ele fizesse o equivalente à notação de objeto no Javascript `theme_color.primary.color`, por exemplo.
+<small>Você pode ler o `map-get()` como se ele fizesse o equivalente à notação de objeto no Javascript `theme_color.primary.color`, por exemplo.</small>
 
 &nbsp;
 
@@ -1105,9 +1110,9 @@ Se a sintaxe ficou confusa, talvez ajude ler como se ele fizesse o equivalente �
 
 ## Mixins
 
-Por último, pra entender a última peça da implementação desse gerador de temas de botão no Sass, precisamos entender o que o trecho `@include button-variant()` está fazendo.
+Pra entender a última peça da implementação desse gerador de temas de botão no Sass, precisamos entender o que o trecho `@include button-variant()` está fazendo.
 
-Abaixo o código simplificado pra facilitar no entendimento, mas você pode ver o código na íntegra no código fonte em `mixins/buttons.scss` [nesse link](https://sass-lang.com/documentation/modules/map).
+Abaixo o código simplificado pra facilitar no entendimento, mas você pode ver a implementação na íntegra no código fonte em `mixins/buttons.scss` [nesse link](https://sass-lang.com/documentation/modules/map).
 
 ```scss
 /* O mixin é como se fosse uma função que pode receber um ou mais parâmetros e retorna um trecho de CSS ou um seletor inteiro */
@@ -1132,7 +1137,7 @@ Abaixo o código simplificado pra facilitar no entendimento, mas você pode ver 
 
 ```
 
-A vantagem da criação do mixin é que com ele é possível funções que retornam um trecho de CSS que é repetido em muitas partes, mas com elasticidade o bastante pra que suas propriedades e valores possam ser customizados via propriedades.
+A vantagem da criação do mixin é que com ele é possível criar funções que retornam um bloco de CSS que pode estar repetido em muitas partes, mas com elasticidade o bastante pra que suas propriedades e valores possam ser customizados via propriedades.
 
 Como você pode ter percebido, nem todas as invocações desse mixin recebiam todos esses parâmetros (ex: `@include button-variant($value, $value);`), isso porque é possível definir certos parâmetros como opcionais!
 
@@ -1312,6 +1317,8 @@ $btn-theme: (
 
 ```
 
+&nbsp;
+
 Eu recomendo muito essa forma de fazer quando os valores pra cada estado são muito específicos ou definidos de forma **manual**, não de forma **proporcional**. Quando falo proporcional, eu quero dizer algo como "pra cada interação eu quero que a luminosidade dessa cor diminua 30%". Trabalhando com a cor dessa forma, conseguimos criar todas variantes partindo apenas de um mapa de cores base.
 
 No caso do Bootstrap, eles usam de funções de cor do Sass pra fazer essa transformação das cores base, por isso que o objeto que eles usam (`$theme-colors`) é tão menor do que o que nós estamos usando.
@@ -1389,14 +1396,14 @@ As funções no Sass são declaradas com `@function()` podem receber uma quantid
 No caso do nosso botão simplificado, podemos nos basear na variável `$theme-color` do Bootstrap, mas gerar as cores das nossas variantes de forma mais direta.
 
 ```scss
-$primary: #0d6efd !default;
-$secondary: #6c757d !default;
-$success: #198754 !default;
-$info: #0dcaf0 !default;
-$warning: #ffc107 !default;
-$danger: #dc3545 !default;
-$light: #f8f9fa !default;
-$dark: #212529 !default;
+$primary: #0d6efd;
+$secondary: #6c757d;
+$success: #198754;
+$info: #0dcaf0;
+$warning: #ffc107;
+$danger: #dc3545;
+$light: #f8f9fa;
+$dark: #212529;
 
 $theme-colors: (
   "primary":    $primary,
@@ -1407,7 +1414,7 @@ $theme-colors: (
   "danger":     $danger,
   "light":      $light,
   "dark":       $dark
-) !default;
+);
 
 @each $color, $value in $theme-colors {
   .btn-#{$color} {
@@ -1480,7 +1487,7 @@ Pra finalizar, o próximo passo é separar as declarações de variáveis em out
 
 > &nbsp;
 > <br/>
-> `:is()` é uma pseudo-classe nativa do CSS, caso não conheça, recomendo muito a leitura da [documentação no MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/:is) (juro que está bem legível e tem exemplos!).
+> 💡 `:is()` é uma pseudo-classe nativa do CSS, caso não conheça, recomendo muito a leitura da [documentação no MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/:is) (juro que está bem legível e tem exemplos!).
 > <br/>
 > &nbsp;
 
@@ -1488,5 +1495,215 @@ Pra finalizar, o próximo passo é separar as declarações de variáveis em out
 
 <br />
 
-## Imports e exports com @use e @forward
+## Imports e exports com @use, @forward e @import
 
+Você pode ter notado que eu citei diversos documentos de `scss` que contém variáveis, operações cou classes importantes na construção de um botão. Vimos um arquivo contendo apenas mixins em `/mixins/_button.scss`, um arquivo contendo apenas variáveis `_/variables.scss` e o próprio componente de botão, o `/_button.scss`.
+
+O Bootstrap usa a *at-rule* `@import` pra carregar todos os arquivos que compõe o framework no documento `bootstrap.scss`.
+
+```scss
+@import "mixins/banner";
+@include bsBanner("");
+
+
+// scss-docs-start import-stack
+// Configuration
+@import "functions";
+@import "variables";
+@import "maps";
+@import "mixins";
+@import "utilities";
+
+// Layout & components
+@import "root";
+@import "reboot";
+@import "type";
+@import "images";
+@import "containers";
+@import "grid";
+@import "tables";
+
+/* ... */
+```
+
+&nbsp;
+
+Diferente do `@import` do CSS que faz uma requisição pra cada documento de CSS importado, o Sass faz com que **todo conteúdo importado seja concatenado ao documento que importou**. Ou seja, após a compilação, todo o código de todos arquivos importados em `bootstrap.scss` estarão nele.
+
+Os arquivos podem ser referenciados sem sua extensão e as *URLs* são importadas de forma relativa por padrão, então você não precisa usar o `./` antes de cada arquivo.
+
+O Sass criou seu *import* dessa forma pra que fosse possível a organização de funcionalidades em documentos separados sem precisar de requisições pra cada um deles, melhorando a performance do site.
+
+O Bootstrap escolheu fazer um *import* em cada linha, mas é possível fazer todos de uma vez, separando por vírgulas:
+
+```scss
+@import "functions", "variables", "maps", "mixins", "utilities";
+
+```
+
+&nbsp;
+
+Como o `@import` insere o código do arquivo importado exatamente onde ele foi declarado, a ordem em que você importa esses arquivos é importante, pois se você criar um arquivo que necessita de variáveis que você declarou em outro arquivo, se eles não forem carregados na ordem correta, o compilador vai apontar a variável como indefinida e gerar um erro. Mas uma vantagem sobre a questão do código ser inserido onde sua importação foi declarada é que podemos escopar a importação de um trecho de código em uma classe ou *media query*. [A documentação](https://sass-lang.com/documentation/at-rules/import#nesting) fala que é interessante usar essa funcionalidade pra importar folhas de estilos de terceiros dentro de um escopo.
+
+```scss
+// Em main.scss
+
+@media (max-width: 440px) {
+  // O código de mobile.scss será inserido aqui
+  @import "mobile";
+}
+
+```
+<small>Conheço pouca gente que sabe disso, mas é muito útil pra quem ainda segue os padrões de mobile first.</small>
+
+Alguns arquivos que mencionei aqui tem um underline (`_`) na frente do nome. No Sass chamamos esses arquivos de *partials*. Ao usar essa convenção, sinalizamos pro Sass que ele não precisa tentar compilá-los individualmente pois eles serão importados em outros arquivos.
+
+Se você quiser separar seus arquivos Sass em pastas, você pode criar um arquivo `_index.scss` importando todos arquivos da pasta e importar a pasta toda no seu arquivo de Sass principal com `@import "<nome-da-pasta>"`
+
+É possível também realizar imports do CSS em um arquivo Sass (aquele import que faz a requisição), pra isso, basta colocar a extensão do arquivo `.css`. URLs externas, imports feitos com `url()` e imports com media queries **também são tratados como importações nativas de CSS**.
+
+Lembra da interpolação que comentei anteriormente? É possível fazer na importação também! Abaixo, um caso de uso bem legal [extraído na íntegra da dcoumentação oficial](https://sass-lang.com/documentation/at-rules/import#nesting).
+
+```scss
+@mixin google-font($family) {
+  /* Lembra que podemos importar até dentro do escopo de alguma classe ou função? */
+  @import url("http://fonts.googleapis.com/css?family=#{$family}");
+}
+
+@include google-font("Droid Sans");
+
+```
+
+&nbsp;
+
+Bacana né? Então, eu não recomendo usar `@import`, nem a [documentação oficial](https://sass-lang.com/documentation/at-rules/import#nesting:~:text=%E2%9A%A0%EF%B8%8F-,Heads%C2%A0up!,-The%20Sass%20team).
+O time do Sass está [gradualmente deixando de dar suporte a essa funcionalidade](https://github.com/sass/sass/blob/main/accepted/module-system.md#timeline), o suporte só continuará até que 80% da base de usuários esteja usando Dart Sass.
+
+Os motivos são importantes não só pra entender os problemas do `@import`, mas como o ecossistema de importação do Sass funciona no geral:
+
+- @import faz com que todas as variáveis, mixins e funções sejam acessíveis globalmente. Isso dificulta muito que pessoas ou ferramentas saibam a procedência dessas coisas.
+
+- As biblitecas precisam prefixar os nomes das coisas pra evitar colisões de nomenclatura, pois tudo é global.
+
+- `@extend` (vamos falar dele em breve) também é global, o que torna difícil prever que estilos serão estendidos.
+
+- Cada folha de estilos Sass é executada e seu CSS é emitido cada vez que a importação dela acontece, o que aumenta o tempo de compilação e tamanho do código.
+
+- Não é possível declarar membros privados ou inacessíveis.
+
+No lugar de `@import` é recomendado o `@use`, que foi criado pra resolver todos esses problemas.
+
+&nbsp;
+
+<br/>
+
+### O @use e a volta do !default
+
+No código dos botões declaramos variáveis contendo cores tema e um *Map* contendo essas variáveis com seus nomes, faz muito sentido abrigar essas variáveis no seu próprio documento, dessa forma toda vez que precisarmos alterar variáveis, saberemos onde encontrar. Como as variáveis geralmente são usadas só pra importar pra outros documentos, recomendo criar o arquivo como uma *partial*, ou seja, `_variables.scss`.
+
+```scss
+// _variables.scss
+
+$primary: #0d6efd;
+$secondary: #6c757d;
+$success: #198754;
+$info: #0dcaf0;
+$warning: #ffc107;
+$danger: #dc3545;
+$light: #f8f9fa;
+$dark: #212529;
+
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+);
+
+```
+
+&nbsp;
+
+Agora incluímos o arquivo no nosso arquivo principal, o `_buttons.scss` usando a *at-rule* `@use`. Inicialmente, podemos só passar a URL do arquivo exatamente como no `@import`. Diferente do seu antecessor, o `@use` importa variáveis, funções e mixin de outro módulo **usando o nome seu arquivo de origem como *namespace***.
+
+```scss
+// _buttons.scss
+
+@use "variables";
+
+.btn {
+  color: variables.$primary;
+}
+
+```
+&nbsp;
+
+Podemos também criar nosso próprio *namespace* usando a palavra chave `as` seguida de um nome sem aspas:
+
+```scss
+// _buttons.scss
+
+@use "variables" as v;
+
+.btn {
+  color: v.$primary;
+}
+
+```
+
+&nbsp;
+
+Se não há riscos de colisão de nomes, podemos importar sem um namespace usando * como nome:
+
+```scss
+// _buttons.scss
+
+@use "variables" as *;
+
+.btn {
+  color: $primary;
+}
+
+```
+
+&nbsp;
+
+Agora vou apresentar um problema hipotético - precisamos criar um novo documento de botões, mas com uma paleta de cores completamente diferente, chamaremos de `_dark-buttons`. Uma solução seria criar variáveis para as novas cores em `_variables.scss` e um *map* pra elas tal vomo na variável `$theme-colors`, certo?
+
+Mas com `@use` podemos configurar valores de variáveis ou mixins de arquivos importados usando o `with()`:
+
+```scss
+// _dark-buttons.scss
+$dark-blue: darkblue;
+$dark-blue: darkgray;
+
+@use "variables" with(
+  $theme-colors: (
+    "primary": $dark-blue,
+    "secondary": $dark-gray,
+    /* ... */
+  )
+);
+
+```
+&nbsp;
+
+Mas pra que isso possa acontecer, precisamos da flag `!default` no *map* de `$theme-colors` pra torná-la configurável:
+
+```scss
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+) !default;
+
+```
